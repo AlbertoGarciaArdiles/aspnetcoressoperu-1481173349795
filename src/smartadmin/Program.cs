@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Builder;
 
 namespace SmartAdmin
 {
@@ -13,10 +14,10 @@ namespace SmartAdmin
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
+                .UseConfiguration(config)
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
-                //.UseUrls("https://0.0.0.0:443", "http://0.0.0.0:80")
                 .Build();
 
             host.Run();
