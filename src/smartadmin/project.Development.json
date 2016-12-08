@@ -3,7 +3,14 @@
   "version": "1.0.0-*",
   "buildOptions": {
     "copyToOutput": {
-        "include": [ "wwwroot", "project.Development.json" ]
+        "include": [
+          "wwwroot",
+          "project.Development.json",
+          "appsettings.json",
+          "appsettings.Staging.json",
+          "appsettings.Production.json",
+          "project.json"
+        ]
 
       },
         "debugType": "portable",

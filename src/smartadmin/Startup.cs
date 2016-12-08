@@ -1,5 +1,5 @@
 ﻿#region Using
- 
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -21,7 +21,7 @@ namespace SmartAdmin
         {
             // Set up configuration sources.
             var builder = new ConfigurationBuilder()
-                 .SetBasePath(env.ContentRootPath)
+                 .SetBasePath( env.ContentRootPath )
                 .AddJsonFile("appsettings.json")
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
 
@@ -29,8 +29,9 @@ namespace SmartAdmin
             {
                 // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
                 builder.AddUserSecrets();
+                builder.AddApplicationInsightsSettings( developerMode: true );
             }
-            
+
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
         }
@@ -46,7 +47,7 @@ namespace SmartAdmin
 
             // Add framework services
             services.AddEntityFrameworkSqlServer()
-                .AddDbContext<ApplicationDbContext>(options => 
+                .AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
@@ -105,6 +106,6 @@ namespace SmartAdmin
             // Seed our database with initial user(s)
             await initializer.SeedAsync();
         }
-        
+
     }
 }
