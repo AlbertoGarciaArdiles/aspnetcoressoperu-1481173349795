@@ -20,7 +20,7 @@
   },
 
   "publishOptions": {
-      "include": [ "wwwroot" ],
+      "include": [ "wwwroot", "Views" ],
       "exclude": [ "**.user", "**.vspscc" ]
   },
 
