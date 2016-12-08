@@ -19,10 +19,12 @@
     "preserveCompilationContext": true
   },
 
-  "publishOptions": {
-      "include": [ "wwwroot", "Views" ],
-      "exclude": [ "**.user", "**.vspscc" ]
-  },
+  "content": [
+   "wwwroot",
+   "Views",
+   "config.json",
+   "web.config"
+ ],
 
   "dependencies": {
     "Microsoft.NETCore.App": {
