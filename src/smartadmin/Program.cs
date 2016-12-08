@@ -20,6 +20,7 @@ namespace SmartAdmin
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseConfiguration(config)
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 //.UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
