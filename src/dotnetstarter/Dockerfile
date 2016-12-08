@@ -10,4 +10,4 @@ RUN ["dotnet", "build"]
 
 EXPOSE 443/tcp
 
-CMD ["dotnet", "run", "--server.urls", "https://aspnetcoressoperu.mybluemix.net"]
+CMD ["dotnet", "run", "--server.urls", "https://*:443"]

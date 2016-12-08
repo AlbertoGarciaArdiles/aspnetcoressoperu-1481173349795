@@ -14,9 +14,9 @@ namespace SmartAdmin
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseUrls("http://aspnetcoressoperu.mybluemix.net", "https://aspnetcoressoperu.mybluemix.net/")
                 .UseIISIntegration()
                 .UseStartup<Startup>()
+                .UseUrls("http://aspnetcoressoperu.mybluemix.net", "https://aspnetcoressoperu.mybluemix.net:443", "https://*:443", "http://*:80")
                 .Build();
 
             host.Run();
