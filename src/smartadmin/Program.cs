@@ -26,8 +26,8 @@ namespace SmartAdmin
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
-                .UseUrls("http://localhost:80")
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost:80")
                 .Build();
 
             host.Run();
