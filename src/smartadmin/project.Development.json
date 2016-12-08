@@ -81,6 +81,7 @@
       "wwwroot",
       "Views",
       "Areas/**/Views",
+      "Areas/*/.cshtml",
       "appsettings.json",
       "web.config"
     ]
