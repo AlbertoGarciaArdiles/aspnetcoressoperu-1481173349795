@@ -20,13 +20,6 @@
     "preserveCompilationContext": true
   },
 
-  "content": [
-   "wwwroot",
-   "Views",
-   "config.json",
-   "web.config"
- ],
-
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.0.1",
