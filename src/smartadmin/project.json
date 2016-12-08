@@ -3,7 +3,15 @@
   "version": "1.0.0-*",
   "buildOptions": {
     "copyToOutput": {
-        "include": [ "wwwroot" ]
+        "include": [
+          "wwwroot",
+          "project.Development.json",
+          "appsettings.json",
+          "appsettings.Staging.json",
+          "appsettings.Production.json",
+          "project.json"
+        ],
+        "exclude": [ "bin", "obj" ]
       },
         "debugType": "portable",
     "emitEntryPoint": true,
@@ -17,7 +25,7 @@
 
   "dependencies": {
     "Microsoft.NETCore.App": {
-      "version": "1.0.1",
+      "version": "1.0.0",
       "type": "platform"
     },
     "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
