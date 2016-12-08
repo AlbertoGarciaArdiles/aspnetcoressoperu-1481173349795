@@ -10,7 +10,8 @@
           "appsettings.Staging.json",
           "appsettings.Production.json",
           "project.json"
-        ]
+        ],
+        "exclude": [ "bin", "obj" ]
 
       },
         "debugType": "portable",
