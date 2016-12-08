@@ -3,7 +3,8 @@
   "version": "1.0.0-*",
   "buildOptions": {
     "copyToOutput": {
-        "include": [ "wwwroot" ]
+        "include": [ "wwwroot", "project.json" ]
+
       },
         "debugType": "portable",
     "emitEntryPoint": true,
