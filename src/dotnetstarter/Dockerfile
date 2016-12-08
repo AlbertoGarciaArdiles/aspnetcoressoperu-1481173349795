@@ -8,6 +8,6 @@ RUN ["dotnet", "restore"]
 
 RUN ["dotnet", "build"]
 
-EXPOSE 443/tcp
+EXPOSE 5000/tcp
 
-CMD ["dotnet", "run", "--server.urls", "https://aspnetcoressoperu.mybluemix.net"]
+CMD ["dotnet", "run", "--server.urls", "https://aspnetcoressoperu.mybluemix.net:5000"]
