@@ -83,7 +83,8 @@
       "Areas/**/Views",
       "Areas/**/Views/**/*.cshtml",
       "appsettings.json",
-      "web.config"
+      "web.config",
+      "*.cshtml"
     ]
   },
   "scripts": {
