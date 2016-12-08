@@ -29,7 +29,7 @@ namespace SmartAdmin
             {
                 // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
                 //builder.AddUserSecrets();
-                builder.AddApplicationInsightsSettings( developerMode: true );
+                builder.AddApplicationInsightsSettings(developerMode: true);
             }
 
             builder.AddEnvironmentVariables();
