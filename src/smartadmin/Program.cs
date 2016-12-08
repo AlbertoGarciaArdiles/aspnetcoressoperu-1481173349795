@@ -18,10 +18,6 @@ namespace SmartAdmin
           //      .AddJsonFile("hosting.json", optional: true)
           //      .Build();
 
-          //var config = new ConfigurationBuilder()
-          //    .AddCommandLine(args)
-          //    .Build();
-
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
