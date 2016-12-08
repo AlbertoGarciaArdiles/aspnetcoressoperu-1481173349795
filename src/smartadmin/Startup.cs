@@ -21,7 +21,7 @@ namespace SmartAdmin
         {
             // Set up configuration sources.
             var builder = new ConfigurationBuilder()
-                 .SetBasePath( env.ContentRootPath )
+                 //.SetBasePath( env.ContentRootPath )
                 .AddJsonFile("appsettings.json")
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
 

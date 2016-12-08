@@ -13,17 +13,16 @@ namespace SmartAdmin
     {
         public static void Main(string[] args)
         {
-          //var config = new ConfigurationBuilder()
-          //      .SetBasePath(Directory.GetCurrentDirectory())
-          //      .AddJsonFile("hosting.json", optional: true)
-          //      .Build();
+          var config = new ConfigurationBuilder()
+                  .AddCommandLine(args)
+                  .Build();
 
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseConfiguration(config)
+                //.UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
-                //.UseUrls("http://${VCAP_APP_HOST}:${PORT}")
                 .Build();
 
             host.Run();
