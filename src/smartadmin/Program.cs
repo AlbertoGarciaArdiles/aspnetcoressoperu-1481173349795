@@ -23,7 +23,7 @@ namespace SmartAdmin
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
-                .UseUrls("http://${VCAP_APP_HOST}:${PORT}")
+                //.UseUrls("http://${VCAP_APP_HOST}:${PORT}")
                 .Build();
 
             host.Run();

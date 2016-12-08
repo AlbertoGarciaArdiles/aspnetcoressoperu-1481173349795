@@ -25,12 +25,14 @@ namespace SmartAdmin
                 .AddJsonFile("appsettings.json")
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
 
-            if (env.IsDevelopment())
-            {
-                // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
-                //builder.AddUserSecrets();
-                builder.AddApplicationInsightsSettings(developerMode: true);
-            }
+                if (env.IsDevelopment())
+                {
+                    builder.AddApplicationInsightsSettings(developerMode: true);
+                }
+                else
+                {
+                    builder.AddApplicationInsightsSettings();
+                }
 
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
