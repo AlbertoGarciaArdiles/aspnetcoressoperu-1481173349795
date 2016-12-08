@@ -9,7 +9,8 @@
           "appsettings.json",
           "appsettings.Staging.json",
           "appsettings.Production.json",
-          "project.json"
+          "project.json",
+          "Views"
         ],
         "exclude": [ "bin", "obj" ]
 
